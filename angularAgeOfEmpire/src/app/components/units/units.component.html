@@ -1,0 +1,50 @@
+<div class="empires">
+    <h1 class="main-title">{{ title }} Page !</h1>
+    <div class="ages">
+        <h2 class="ages-title">Ages</h2>
+        <ul class="ages-list">
+            <li class="ages-list-items" *ngFor="let age of ages, let i = index">
+                <button :key="age" [ngClass]="{'activeItem': activeMenuItem == age}"
+                        name="ageFilter" autoComplete="off" [value]="age" (click)="changeAge($event);setActive(age)">{{ age }}</button>
+            </li>
+        </ul>
+    </div>
+    <div class="costs">
+        <h2 class="costs-title">Costs</h2>
+        <div class="cost-slider" *ngFor="let cost of costs | keyvalue; let i = index;">
+            <label class="btn btn-filter" id="bttns">
+                <input type="checkbox" name="costFilter" autoComplete="off" [value]="cost.value"
+                       (change)="changeCost($event)">
+                {{ cost.value }}
+            </label>
+            <ng5-slider style="width: 250px;"
+                        (userChangeEnd)="changeCostValue(cost.value, $event)"
+                        [value]="rangeSlider.minValue"
+                        highValue="{{rangeSlider.maxValue}}"
+                        [options]="costOptions[cost.value]">
+            </ng5-slider>
+        </div>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Cost</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let person of empiresFiltered">
+            <td><a [routerLink]="['/unitDetail', person.id]">{{person.id}}</a></td>
+            <td>{{person.name}}</td>
+            <td>{{person.age}}</td>
+            <td *ngIf="person.cost">
+                <span *ngIf="person.cost.Wood"> Wood:{{person.cost.Wood}},</span>
+                <span *ngIf="person.cost.Food"> Food:{{person.cost.Food}},</span>
+                <span *ngIf="person.cost.Gold"> Gold:{{person.cost.Gold}}</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

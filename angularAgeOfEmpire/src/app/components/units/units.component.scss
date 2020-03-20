@@ -1,0 +1,58 @@
+.empires {
+  font-family: 'Capriola', sans-serif;
+
+  h1.main-title {
+    text-align: center;
+    font-size: 44px;
+    font-weight: bolder;
+  }
+
+  .ages {
+    .ages-title {
+      padding-left: 40px;
+    }
+
+    .ages-list {
+      list-style: none;
+      display: flex;
+
+      .ages-list-items {
+        display: inline-flex;
+
+        button {
+          border: 2px solid #000000;
+          padding: 10px;
+          font-size: 19px;
+          outline: none;
+
+        }
+      }
+    }
+  }
+
+  .costs {
+    padding-top: 30px;
+
+    .costs-title {
+      padding-left: 40px;
+    }
+
+    .cost-slider {
+      padding-left: 35px;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 50px 0 0 30px;
+    width: 90%;
+  }
+
+  table, td, th {
+    border: 1px solid black;
+  }
+}
+
+.activeItem{
+  background: #cccccc;
+}

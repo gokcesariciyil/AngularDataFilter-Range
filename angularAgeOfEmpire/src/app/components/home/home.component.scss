@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Capriola&display=swap&subset=latin-ext');
+
+.home {
+  font-family: 'Capriola', sans-serif;
+
+  h1.main-title {
+    text-align: center;
+    font-size: 44px;
+    font-weight: bolder;
+  }
+
+  .main-page-img {
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+}

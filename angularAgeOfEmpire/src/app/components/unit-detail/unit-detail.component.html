@@ -1,0 +1,17 @@
+<div class="unit-detail">
+    <h1 class="main-title">{{ title }} Page !</h1>
+    <ul *ngFor="let detail of details">
+        <li>ID : <span>{{detail.id}}</span></li>
+        <li>Name : <span>{{detail.name}}</span></li>
+        <li>Description : <span>{{detail.description}}</span></li>
+        <li>Age : <span>{{detail.age}}</span></li>
+        <li *ngIf="detail.cost.Food">Food :<span>{{detail.cost.Food}}</span> </li>
+        <li *ngIf="detail.cost.Wood">Wood :<span>{{detail.cost.Wood}}</span> </li>
+        <li *ngIf="detail.cost.Gold">Gold :<span>{{detail.cost.Gold}}</span> </li>
+        <li>Build Time : <span>{{detail.build_time}}</span></li>
+        <li>Reload Time : <span>{{detail.reload_time}}</span></li>
+        <li>Hit Points : <span>{{detail.hit_points}}</span></li>
+        <li>Attack : <span>{{detail.attack}}</span></li>
+        <li>Accuracy : <span>{{detail.accuracy}}</span></li>
+    </ul>
+</div>

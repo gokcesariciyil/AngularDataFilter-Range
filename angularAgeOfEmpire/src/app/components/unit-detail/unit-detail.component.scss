@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Capriola&display=swap&subset=latin-ext');
+
+.unit-detail{
+  font-family: 'Capriola', sans-serif;
+
+  h1.main-title {
+    font-family: 'Capriola', sans-serif;
+    text-align: center;
+    font-size: 44px;
+    font-weight: bolder;
+  }
+
+  ul {
+    list-style: none;
+    width: 70%;
+
+    li {
+      border: 2px solid #dcdcdc;
+      border-bottom: 0;
+      padding: 5px 30px;
+      font-size: 22px;
+      color: #484848;
+
+      &:last-child {
+        border-bottom: 2px solid #dcdcdc;
+      }
+
+      span{
+        font-weight: bold;
+        font-size: 24px;
+        margin-left: 10px;
+        color: #000000;
+      }
+    }
+  }
+}
+
